@@ -1,5 +1,18 @@
+nav{
+  text-align: center;
+  margin: 2%;
+}
+
+button {
+  padding: 10px;
+}
+
+.album {
+  display: block;
+  width: 30px;
+  height:30px;
+  
 body{
-  background: aquamarine;
   min-height: 100vh;
 }
 
@@ -11,6 +24,3 @@ body{
   margin-right: auto;
 }
 
-nav {
-  background-color: darkcyan;
-}
