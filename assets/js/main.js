@@ -19,18 +19,16 @@ try {
 	const result = await response.json();
 	console.log((result));
 
-  album.textContext = result.albums.items[0].data.uri;
-  cover.textContext = result.albums.items[0].data.coverArt.sources[0].url;
+  album.textContent = result.albums.items[0].data.uri;
+  cover.src = result.albums.items[0].data.coverArt.sources[0].url;
   
   console.log(album.textContext);
-  console.log(cover.textContext);
+  console.log(cover.src);
   // return result;
 } catch (error) {
 	console.error(error);
 }
 }
-
-// getMusic(userInput);
 
 btn.addEventListener("click",function(){
   const music = userInput.value;
@@ -38,7 +36,7 @@ btn.addEventListener("click",function(){
 });
 
 // getMusic(userInput);
-
+// getMusic(userInput);
 // function handleButtonClick(event){
 //   event.preventDefault();
 
