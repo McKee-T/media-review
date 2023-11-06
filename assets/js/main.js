@@ -4,8 +4,8 @@ const userInput = document.querySelector('input');
 const btn = document.querySelector('button');
 var album = document.querySelector(".album");
 var cover = document.querySelector(".cover");
-async function getMusic(album) {
-  const url = `https://spotify23.p.rapidapi.com/search/?q=${album}&type=albums&offset=0&limit=3&numberOfTopResults=5`;
+async function getMusic(soundtrack) {
+  const url = `https://spotify23.p.rapidapi.com/search/?q=${soundtrack}&type=albums&offset=0&limit=3&numberOfTopResults=5`;
   const options = {
 	method: 'GET',
 	headers: {
@@ -18,8 +18,12 @@ try {
 	const response = await fetch(url, options);
 	const result = await response.json();
 	console.log((result));
-  album.textContext = JSON.stringify(result.albums.items[0].data.name);
-  cover.src = JSON.stringify(result.albums.items[0].data.coverArt.sources[0]);
+
+  album.textContext = result.albums.items[0].data.uri;
+  cover.textContext = result.albums.items[0].data.coverArt.sources[0].url;
+  
+  console.log(album.textContext);
+  console.log(cover.textContext);
   // return result;
 } catch (error) {
 	console.error(error);
@@ -29,8 +33,8 @@ try {
 // getMusic(userInput);
 
 btn.addEventListener("click",function(){
-  const albumName = userInput.value;
-  getMusic(albumName);
+  const music = userInput.value;
+  getMusic(music);
 });
 
 // getMusic(userInput);

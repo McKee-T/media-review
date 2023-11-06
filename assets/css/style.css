@@ -1,8 +1,12 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
-body{
+/* body{
   background: aquamarine;
   min-height: 100vh;
+} */
+
+nav{
+  text-align: center;
 }
 
 button {
@@ -10,5 +14,6 @@ button {
 }
 
 .album {
-  font-size: 50px;
+  width: 100px;
+  height:100px;
 }
