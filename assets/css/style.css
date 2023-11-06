@@ -4,3 +4,11 @@ body{
   background: aquamarine;
   min-height: 100vh;
 }
+
+button {
+  padding: 10px;
+}
+
+.album {
+  font-size: 50px;
+}
