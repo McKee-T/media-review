@@ -74,7 +74,7 @@ async function getMusic(soundtrack) {
 }
 
 btn.addEventListener("click", function () {
-  const music = userInput.value;
+  const music = input.value;
   getMusic(music);
 });
 
