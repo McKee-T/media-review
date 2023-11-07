@@ -8,12 +8,20 @@ button {
 }
 
 .album {
+  text-align: left;
+  margin: 2%;
   display: block;
   width: 30px;
   height:30px;
 }
 
+.cover {
+  margin: 2%;
+  text-align: left;
+}
+
 body{
+  background: grey;
   min-height: 100vh;
 }
 
@@ -25,3 +33,11 @@ body{
   margin-right: auto;
 }
 
+.title {
+  color: black;
+}
+
+.card {
+  width: 50%;
+  float: left;
+}
