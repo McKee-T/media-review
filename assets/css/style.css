@@ -1,6 +1,7 @@
 nav{
   text-align: center;
   margin: 2%;
+  background-color: darkcyan;
 }
 
 button {
@@ -20,9 +21,11 @@ button {
   text-align: left;
 }
 
+
 body{
   background: grey;
   min-height: 100vh;
+  background: aquamarine;
 }
 
 .logo {
