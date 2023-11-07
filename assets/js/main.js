@@ -28,7 +28,7 @@ function omdbApi (){
 
 searchButton.addEventListener("click", omdbApi);
 // input.addEventListener("input");
-=======
+// =======
 const userInput = document.querySelector('input');
 const btn = document.querySelector('button');
 var album = document.querySelector(".album");
