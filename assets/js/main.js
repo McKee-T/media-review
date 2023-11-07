@@ -1,35 +1,37 @@
 var searchButton = document.getElementById('searchButton');
 var input = document.getElementById('input');
+var movieInfo = document.querySelector('.movieInfo');
+var moviePoster = document.querySelector('.moviePoster');
 var title = document.querySelector(".title");
 var resultsList = document.getElementById("results");
 
 function omdbApi() {
   event.preventDefault();
   var requestURL = "https://www.omdbapi.com/?t=" + input.value + "&apikey=3c53385a&"
-  // var requestPoster = "https://img.omdbapi.com/?apikey=3c53385a&"
   fetch(requestURL)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data);
-      title.textContent = data.Title;
-
-    })
-
-  // var year = data.Year;
-  // var actors = data.Actors;
-  // var director = data.Director;
-  // var writer = data.Writer;
-  // var awards = data.Awards;
-  // var listMovieInfo = document.createElement('li');
-  // listMovieInfo.textContent = title +"<br>" + year+"<br>" + actors+"<br>" + director+"<br>" + writer+"<br>" + awards;
-  // innerHTML.appendChild(listMovieInfo);
-
+  .then(function(response){
+    return response.json();
+  })
+  .then(function(data){
+    console.log(data);
+  var title = data.Title;
+  var poster = data.Poster;
+  var year = data.Year;
+  var actors = data.Actors;
+  var director = data.Director;
+  var writer = data.Writer;
+  var awards = data.Awards;
+  var listMovieInfo = document.createElement('li');
+  var imgTaagg = document.createElement('img');
+  imgTaagg.setAttribute("src",poster);
+  listMovieInfo.textContent = title  +  year +  actors  +  director  +  writer  +  awards;
+  movieInfo.appendChild(imgTaagg);
+  movieInfo.appendChild(listMovieInfo);
+})
 };
 
 searchButton.addEventListener("click", omdbApi);
-// input.addEventListener("input");
+
 
 const userInput = document.querySelector('input');
 const btn = document.querySelector('button');
@@ -63,13 +65,9 @@ async function getMusic(soundtrack) {
       resultsList.appendChild(anchorTag);
       anchorTag.appendChild(imageTag);
     }
-    // const spotifyLink = document.getElementById("spotify-link");
-    // spotifyLink.href = album;
-    // spotifyLink.textContent = "Listen to the Soundtrack on Spotify:";
-
     console.log(album.textContext);
     console.log(cover.src);
-    // return result;
+   
   } catch (error) {
     console.error(error);
   }
@@ -80,43 +78,3 @@ btn.addEventListener("click", function () {
   getMusic(music);
 });
 
-// getMusic(userInput);
-// getMusic(userInput);
-// function handleButtonClick(event){
-//   event.preventDefault();
-
-//   if (event.target.matches('button')){
-//     event.target.getAttribute(".album");
-
-//     getMusic(album);
-//     console.log(getMusic);
-//     console.log("this button worked");
-//   }
-// }
-// fetch(url)// promise based
-//       .then(function (response) {
-//           return response.json(); // parse the response data
-//       })
-//       .then(function (data) { // data should be an array or an object
-//           console.log(data);
-//       })
-
-//  catch (error) {
-//   console.error(error);
-// }
-// console.log("connected test is good.");
-
-
-// cityForm.addEventListener("submit", captureCity);
-
-// function addComment() {
-//   const commentInput = document.getElementById("comment-input");
-//   const commentText = commentInput.value.trim();
-//   if (commentText !== "") {
-//     const commentList = document.getElementById("comment-list");
-//     const listItem = document.createElement("li");
-//     listItem.className = "collection-item";
-//     listItem.textContent = commentText;
-//     commentList.appendChild(listItem);
-//     commentInput.value = ""; // Clear the input field after adding a comment
-//   }}
