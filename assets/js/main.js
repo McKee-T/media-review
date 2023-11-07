@@ -38,7 +38,7 @@ const btn = document.querySelector('button');
 var album = document.querySelector(".album");
 var cover = document.querySelector(".cover");
 async function getMusic(soundtrack) {
-  const url = `https://spotify23.p.rapidapi.com/search/?q=${soundtrack}&type=albums&offset=0&limit=3&numberOfTopResults=5`;
+  const url = `https://spotify23.p.rapidapi.com/search/?q=${soundtrack}+soundtrack&type=albums&offset=0&limit=3&numberOfTopResults=5`;
   const options = {
     method: 'GET',
     headers: {
