@@ -21,6 +21,9 @@ try {
 
   album.textContent = result.albums.items[0].data.uri;
   cover.src = result.albums.items[0].data.coverArt.sources[0].url;
+  // const spotifyLink = document.getElementById("spotify-link");
+  // spotifyLink.href = album;
+  // spotifyLink.textContent = "Listen to the Soundtrack on Spotify:";
   
   console.log(album.textContext);
   console.log(cover.src);
