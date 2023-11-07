@@ -21,6 +21,7 @@ button {
 }
 
 body{
+  background: grey;
   min-height: 100vh;
 }
 
@@ -34,4 +35,9 @@ body{
 
 .title {
   color: black;
+}
+
+.card {
+  width: 50%;
+  float: left;
 }
