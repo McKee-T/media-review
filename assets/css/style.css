@@ -1,7 +1,31 @@
+nav{
+  text-align: center;
+  margin: 2%;
+}
+
+button {
+  padding: 10px;
+}
+
+.album {
+  display: block;
+  width: 30px;
+  height:30px;
+  
 body{
   background: grey;
   min-height: 100vh;
 }
+
+.logo {
+  width: auto;
+  max-height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 .card {
   width: 50%;
   float: left;
