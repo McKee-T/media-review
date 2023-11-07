@@ -11,8 +11,9 @@ button {
   display: block;
   width: 30px;
   height:30px;
-  
+}
 body{
+  background: grey;
   min-height: 100vh;
 }
 
@@ -24,3 +25,8 @@ body{
   margin-right: auto;
 }
 
+
+.card {
+  width: 50%;
+  float: left;
+}
