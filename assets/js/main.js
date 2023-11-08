@@ -6,6 +6,7 @@ var title = document.querySelector(".title");
 var resultsList = document.getElementById("results");
 
 function omdbApi() {
+  movieInfo.innerHTML = "";
   event.preventDefault();
   var requestURL = "https://www.omdbapi.com/?t=" + input.value + "&apikey=3c53385a&"
   fetch(requestURL)
@@ -60,7 +61,7 @@ const btn = document.getElementById('searchButton');
 var album = document.querySelector(".album");
 var cover = document.querySelector(".cover");
 async function getMusic(soundtrack) {
-  const url = `https://spotify23.p.rapidapi.com/search/?q=${soundtrack}+soundtrack&type=albums&offset=0&limit=3&numberOfTopResults=5`;
+  const url = `https://spotify23.p.rapidapi.com/search/?q=${soundtrack}+soundtrack&type=albums&offset=0&limit=2&numberOfTopResults=2`;
   const options = {
     method: 'GET',
     headers: {
