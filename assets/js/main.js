@@ -30,7 +30,7 @@ function omdbApi() {
   var writerLi = document.createElement("li");
   var awardsLi = document.createElement("li");
   titleLi.textContent = title;
-  yearLi.textContent = year;
+  yearLi.textContent = "("+year+")";
   actorLi.textContent = "Actors: " + actors;
   directorLi.textContent =" Director: " + director;
   writerLi.textContent =" Writers: "+writer;

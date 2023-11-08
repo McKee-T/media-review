@@ -1,7 +1,5 @@
 nav{
   text-align: center;
-  margin: 2%;
-  background-color: darkcyan;
 }
 
 button {
@@ -60,6 +58,11 @@ body{
 .cover {
   margin: 2%;
   text-align: left;
+}
+
+
+body{
+  min-height: 100vh;
 }
 
 .logo {
