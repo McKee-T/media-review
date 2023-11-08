@@ -128,6 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
     commentsInput.type = "text";
     commentsInput.value = item.comments;
     commentsInput.placeholder = "Add comments";
+    commentsInput.style.backgroundColor = "#008080"; 
     commentsInput.addEventListener("input", function () {
       item.comments = commentsInput.value;
       updateLocalStorage();
