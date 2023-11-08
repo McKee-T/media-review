@@ -15,19 +15,22 @@ body{
 }
 
 .parent-container{
+  margin-left: 23.5%;
+  margin-right: 23.5%;
+  display: flex;
+  justify-content: center;
   display: inline-flex;
   flex-wrap: wrap;
   flex-direction: row;
 }
 
-.flex-container {
+.flex-container2 {
   display: flex;
+  margin: 5px;
   padding: 0px;
   justify-content: space-evenly;
-  max-width: 1000px;
-  max-height:600px;
-  justify-content: space-evenly;
-  border: 2px solid red;
+  max-width: 1500px;
+  max-height: 300px;
 }
 
 #results {
@@ -39,9 +42,9 @@ body{
   margin: 2px;
 }
 
-.flex-container2 {
+.flex-container {
+  justify-content: center;
   display: flex;
-  border: 2px solid red;
   margin: 5px;
   flex-wrap: wrap;
 }
@@ -74,4 +77,10 @@ body{
 .card {
   width: 50%;
   float: left;
+}
+
+#list {
+  list-style: none;
+  width: 350px;
+  height: 600px;
 }
