@@ -118,6 +118,8 @@ document.addEventListener("DOMContentLoaded", function () {
   function createWatchlistItem(item) {
     const listItem = document.createElement("li");
     listItem.classList.add("collection-item");
+    listItem.style.backgroundColor = "#009688"; 
+
 
     // Create item name from input
     const itemName = document.createElement("span");
@@ -128,6 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
     commentsInput.type = "text";
     commentsInput.value = item.comments;
     commentsInput.placeholder = "Add comments";
+    commentsInput.style.backgroundColor = "#009688"; 
     commentsInput.addEventListener("input", function () {
       item.comments = commentsInput.value;
       updateLocalStorage();

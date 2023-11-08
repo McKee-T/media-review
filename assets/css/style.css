@@ -7,9 +7,7 @@ button {
 }
 
 body{
-  background: grey;
   min-height: 100vh;
-  background: aquamarine;
 }
 
 .parent-container{
@@ -60,21 +58,12 @@ body{
   text-align: left;
 }
 
-
-body{
-  min-height: 100vh;
-}
-
 .logo {
   width: auto;
   max-height: 200px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-.title {
-  color: black;
 }
 
 .card {
@@ -87,3 +76,5 @@ body{
   width: 350px;
   height: 600px;
 }
+
+
