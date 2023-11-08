@@ -17,19 +17,32 @@ body{
 .parent-container{
   display: inline-flex;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .flex-container {
   display: flex;
+  padding: 0px;
   justify-content: space-evenly;
-  margin: 15%;
+  max-width: 1000px;
+  max-height:600px;
+  justify-content: space-evenly;
   border: 2px solid red;
+}
+
+#results {
+  display: flex;
+  padding: 0px;
+  justify-content: space-evenly;
+  max-width: 1000px;
+  max-height:600px;
+  margin: 2px;
 }
 
 .flex-container2 {
   display: flex;
   border: 2px solid red;
-  margin: 15%;
+  margin: 5px;
   flex-wrap: wrap;
 }
 
