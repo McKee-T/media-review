@@ -34,7 +34,7 @@ searchButton.addEventListener("click", omdbApi);
 
 
 const userInput = document.querySelector('input');
-const btn = document.querySelector('button');
+const btn = document.getElementById('searchButton');
 var album = document.querySelector(".album");
 var cover = document.querySelector(".cover");
 async function getMusic(soundtrack) {
