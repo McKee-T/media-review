@@ -1,7 +1,5 @@
 nav{
   text-align: center;
-  margin: 2%;
-  background-color: darkcyan;
 }
 
 button {
@@ -9,9 +7,7 @@ button {
 }
 
 body{
-  background: grey;
   min-height: 100vh;
-  background: aquamarine;
 }
 
 .parent-container{
@@ -68,10 +64,6 @@ body{
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-.title {
-  color: black;
 }
 
 .card {
