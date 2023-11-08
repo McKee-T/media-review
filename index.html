@@ -20,12 +20,15 @@
             </a>
 
             <ul class="left hide-on-med-and-down">
-                <li><a><i class="material-icons">search</i></a></li>
-
-                <form>
-                    <input tyle="text" placeholder="Enter Movie Title" id="input">
-                    <button type="submit" id="searchButton">Search</button>
-                </form>
+                    <form>
+                        <li><a>
+                            <input tyle="text" placeholder="Enter Movie Title" id="input">
+                        </a></li>
+                        <li><a id="searchButton" class="waves-effect waves-light btn">search
+                            
+                            <i class="material-icons right" type="submit" id="searchButton">search</i>
+                        </a></li> 
+                    </form>
 
             </ul>
         </div>
@@ -47,6 +50,12 @@
             <!-- <li class="movieInfo" id="list"></li> -->
         </ul>
         <!-- <img class = "moviePoster"> -->
+    </section>
+        <div class="input-field">
+            <input type="text" id="item-input" placeholder="Add a title to you watchlist.">
+            <button id="add-item" class="btn">Add</button>
+          </div> 
+        <ul id="watchlist" class="collection"></ul>
     </section>
     </main>
 
