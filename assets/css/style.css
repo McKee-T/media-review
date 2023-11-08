@@ -44,3 +44,9 @@ body{
   width: 50%;
   float: left;
 }
+
+#list {
+  list-style: none;
+  width: 350px;
+  height: 600px;
+}
