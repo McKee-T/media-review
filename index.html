@@ -7,23 +7,26 @@
     <title>FiveStars</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body class= "teal accent-3">
+<body class="teal accent-3">
     <nav class="teal accent-4">
         <div class="nav-wrapper">
             </a>
             <ul class="left hide-on-med-and-down">
-                    <form>
-                        <li><a>
+                <form>
+                    <li><a>
                             <input tyle="text" placeholder="Enter Movie Title" id="input">
                         </a></li>
-                        <li><a id="searchButton" class="waves-effect waves-light btn teal">search
-                            
+                    <li><a id="searchButton" class="waves-effect waves-light btn teal">search
+
                             <i class="material-icons right" type="submit" id="searchButton">search</i>
-                        </a></li> 
-                    </form>
+                        </a></li>
+                </form>
             </ul>
         </div>
     </nav>
@@ -33,31 +36,33 @@
 
         <div>
             <h5 class="center-align">A website where you can search for movies and their soundtracks, add
-                movies/soundtracks to your watchlist, and save your reviews and comments after watching.</h5>
+                them to your watchlist, and save your reviews and comments after watching.</h5>
         </div>
-
+        <br>
+        <p class="soundtrack-text"></p>
         <section class="parent-container">
 
             <ul class="movieInfo flex-container" id="list">
             </ul>
 
-             <section class="flex-container2">
+            <section class="flex-container2">
                 <div class="album"></div>
                 <div id="results"></div>
                 <img class="cover">
+
             </section>
-            <br>
+
         </section>
-        
+
 
         <div class="input-field">
-            <input class= "teal" type="text" id="item-input" placeholder="Add a title to your watchlist.">
+            <input class="teal" type="text" id="item-input" placeholder="Add a title to your watchlist.">
             <button id="add-item" class="btn">Add</button>
 
         </div>
 
         <ul id="watchlist" class="collection"></ul>
-    
+
     </main>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

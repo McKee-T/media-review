@@ -4,7 +4,7 @@ var movieInfo = document.getElementById('list');
 var moviePoster = document.querySelector('.moviePoster');
 var title = document.querySelector(".title");
 var resultsList = document.getElementById("results");
-
+var clickMessage = document.querySelector(".soundtrack-text");
 function omdbApi() {
   movieInfo.innerHTML = "";
   event.preventDefault();
@@ -54,7 +54,7 @@ function omdbApi() {
 };
 
 searchButton.addEventListener("click", omdbApi);
-
+clickMessage.innerHTML = "";
 
 const userInput = document.querySelector('input');
 const btn = document.getElementById('searchButton');
@@ -72,6 +72,7 @@ async function getMusic(soundtrack) {
 
   try {
     resultsList.innerHTML = "";
+    clickMessage.innerHTML = "Click the soundtrack to listen on Spotify!";
     const response = await fetch(url, options);
     const result = await response.json();
     console.log((result));
@@ -87,6 +88,7 @@ async function getMusic(soundtrack) {
       imageTag.setAttribute("src", image);
       resultsList.appendChild(anchorTag);
       anchorTag.appendChild(imageTag);
+      
     }
     console.log(album.textContext);
     console.log(cover.src);
