@@ -32,10 +32,6 @@ body{
   margin-right: auto;
 }
 
-.title {
-  color: black;
-}
-
 .card {
   width: 50%;
   float: left;
