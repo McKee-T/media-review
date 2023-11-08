@@ -6,6 +6,7 @@ var title = document.querySelector(".title");
 var resultsList = document.getElementById("results");
 
 function omdbApi() {
+  movieInfo.innerHTML = "";
   event.preventDefault();
   var requestURL = "https://www.omdbapi.com/?t=" + input.value + "&apikey=3c53385a&"
   fetch(requestURL)
@@ -29,7 +30,7 @@ function omdbApi() {
   var writerLi = document.createElement("li");
   var awardsLi = document.createElement("li");
   titleLi.textContent = title;
-  yearLi.textContent = year;
+  yearLi.textContent = " - "+ year;
   actorLi.textContent = "Actors: " + actors;
   directorLi.textContent =" Director: " + director;
   writerLi.textContent =" Writers: "+writer;
@@ -56,11 +57,11 @@ searchButton.addEventListener("click", omdbApi);
 
 
 const userInput = document.querySelector('input');
-const btn = document.querySelector('button');
+const btn = document.getElementById('searchButton');
 var album = document.querySelector(".album");
 var cover = document.querySelector(".cover");
 async function getMusic(soundtrack) {
-  const url = `https://spotify23.p.rapidapi.com/search/?q=${soundtrack}+soundtrack&type=albums&offset=0&limit=3&numberOfTopResults=5`;
+  const url = `https://spotify23.p.rapidapi.com/search/?q=${soundtrack}+soundtrack&type=albums&offset=0&limit=2&numberOfTopResults=2`;
   const options = {
     method: 'GET',
     headers: {
@@ -100,3 +101,60 @@ btn.addEventListener("click", function () {
   getMusic(music);
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const watchlist = document.getElementById("watchlist");
+  const itemInput = document.getElementById("item-input");
+  const addItemButton = document.getElementById("add-item");
+
+  // Retrieve watchlist from local storage
+  const savedWatchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+
+  // Load saved items
+  savedWatchlist.forEach((item) => {
+    createWatchlistItem(item);
+  });
+
+  // Function to create a new watchlist item
+  function createWatchlistItem(item) {
+    const listItem = document.createElement("li");
+    listItem.classList.add("collection-item");
+
+    // Create item name from input
+    const itemName = document.createElement("span");
+    itemName.textContent = item.name;
+
+    // Create input field for comments
+    const commentsInput = document.createElement("input");
+    commentsInput.type = "text";
+    commentsInput.value = item.comments;
+    commentsInput.placeholder = "Add comments";
+    commentsInput.addEventListener("input", function () {
+      item.comments = commentsInput.value;
+      updateLocalStorage();
+    });
+
+    // Append item name and comments input to the list item
+    listItem.appendChild(itemName);
+    listItem.appendChild(commentsInput);
+
+    // Append the list item to the watchlist
+    watchlist.appendChild(listItem);
+  }
+
+  // Function to add a new item to the watchlist
+  function addWatchlistItem() {
+    const newItem = { name: itemInput.value, comments: "" };
+    savedWatchlist.push(newItem);
+    createWatchlistItem(newItem);
+    updateLocalStorage();
+    itemInput.value = ""; // Clear the input field after adding the item
+  }
+
+  // Update local storage with the current watchlist
+  function updateLocalStorage() {
+    localStorage.setItem("watchlist", JSON.stringify(savedWatchlist));
+  }
+
+  // Add event listeners
+  addItemButton.addEventListener("click", addWatchlistItem);
+});
