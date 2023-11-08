@@ -118,6 +118,8 @@ document.addEventListener("DOMContentLoaded", function () {
   function createWatchlistItem(item) {
     const listItem = document.createElement("li");
     listItem.classList.add("collection-item");
+    listItem.style.backgroundColor = "#008080"; 
+
 
     // Create item name from input
     const itemName = document.createElement("span");
