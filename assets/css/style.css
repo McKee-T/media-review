@@ -6,6 +6,45 @@ button {
   padding: 10px;
 }
 
+body{
+  min-height: 100vh;
+}
+
+.parent-container{
+  margin-left: 23.5%;
+  margin-right: 23.5%;
+  display: flex;
+  justify-content: center;
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.flex-container2 {
+  display: flex;
+  margin: 5px;
+  padding: 0px;
+  justify-content: space-evenly;
+  max-width: 1500px;
+  max-height: 300px;
+}
+
+#results {
+  display: flex;
+  padding: 0px;
+  justify-content: space-evenly;
+  max-width: 1000px;
+  max-height:600px;
+  margin: 2px;
+}
+
+.flex-container {
+  justify-content: center;
+  display: flex;
+  margin: 5px;
+  flex-wrap: wrap;
+}
+
 .album {
   text-align: left;
   margin: 2%;
@@ -19,21 +58,12 @@ button {
   text-align: left;
 }
 
-
-body{
-  min-height: 100vh;
-}
-
 .logo {
   width: auto;
   max-height: 200px;
   display: block;
   margin-left: auto;
   margin-right: auto;
-}
-
-.title {
-  color: black;
 }
 
 .card {
