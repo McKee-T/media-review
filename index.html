@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,26 +31,35 @@
             </ul>
         </div>
     </nav>
-  <img class="logo" src="./assets/IMG_0207.PNG">
+    <img class="logo" src="./assets/IMG_0207.PNG">
 
     <main>
+
         <div>
             <h5 class="center-align">A website where you can search for movies and their soundtracks, add
                 movies/soundtracks to your watchlist, and save your reviews and comments after watching.</h5>
         </div>
 
-      <div class="album"></div>
-      <div id="results"></div>
-      <img class="cover">
-      <section class="movieInfo">
-        <img class = "moviePoster">
-    </section>
+        <section class="parent-container">
+
+            <section class="flex-container">
+                <div class="album"></div>
+                <div id="results"></div>
+                <img class="cover">
+            </section>
+
+            <section class="movieInfo flex-container2">
+                <img class="moviePoster">
+            </section>
+        </section>
+        
+
         <div class="input-field">
             <input type="text" id="item-input" placeholder="Add a title to you watchlist.">
             <button id="add-item" class="btn">Add</button>
-          </div> 
+        </div>
         <ul id="watchlist" class="collection"></ul>
-    </section>
+    
     </main>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
