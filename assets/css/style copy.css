@@ -10,10 +10,6 @@ body{
   min-height: 100vh;
 }
 
-.center-align {
-  font-family: 'Alegreya Sans', sans-serif;
-  font-size: 30px;
-}
 .parent-container{
   margin-left: 5%;
   margin-right: 5%;
@@ -23,20 +19,6 @@ body{
   flex-wrap: wrap;
   flex-direction: row;
   width: 100%;
-}
-
-.flex-container {
-  justify-content: center;
-  display: flex;
-  margin: 5px;
-  flex-wrap: wrap;
-}
-
-.flex-container {
-  justify-content: center;
-  display: flex;
-  margin: 5px;
-  flex-wrap: wrap;
 }
 
 .flex-container2 {
@@ -62,12 +44,6 @@ body{
   display: flex;
   margin: 5px;
   flex-wrap: wrap;
-}
-
-.soundtrack-text {
-  margin-left: 50%;
-  font-family: 'Alegreya Sans', sans-serif;
-  font-size: 20px;
 }
 
 .album {
@@ -100,13 +76,4 @@ body{
   list-style: none;
   width: 300px;
   height: 600px;
-}
-
-#results {
-  display: flex;
-  padding: 0px;
-  justify-content: space-evenly;
-  max-width: 1000px;
-  max-height:600px;
-  margin: 2px;
 }
