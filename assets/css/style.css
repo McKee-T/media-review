@@ -1,8 +1,11 @@
+/* Element */
 nav{
   text-align: center;
+  margin: 0px;
+  max-width: 100%;
 }
 
-button {
+button{
   padding: 10px;
 }
 
@@ -10,67 +13,72 @@ body{
   min-height: 100vh;
 }
 
-.center-align {
+/* Class */
+.center-align{
   font-family: 'Alegreya Sans', sans-serif;
   font-size: 30px;
 }
+
 .parent-container{
-  margin-left: 5%;
+  margin-left: 35%;
   margin-right: 5%;
   display: flex;
   justify-content: center;
   display: inline-flex;
   flex-wrap: wrap;
   flex-direction: row;
-  width: 100%;
 }
 
-.flex-container {
+.flex-container{
   justify-content: center;
   display: flex;
-  margin: 5px;
+  margin:0px;
+  margin-right: 70px;
   flex-wrap: wrap;
+  /* box-shadow: 5px 5px 20px black; */
+}
+.journal-text{
+  text-align: center;
+  font-family:'Alegreya Sans', sans-serif;
+  font-size: 35px;
+  border: 2px solid gray;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 0px;
+  background-color: rgb(221, 244, 50);
 }
 
-.flex-container {
+.flex-container2{
+  display: flex;
   justify-content: center;
-  display: flex;
-  margin: 5px;
-  flex-wrap: wrap;
-}
-
-.flex-container2 {
-  display: flex;
-  margin: 5px;
+  align-items: center;
+  /* max-width: 1500px; */
+  max-height: 310px;
   padding: 0px;
-  justify-content: center;
-  max-width: 1500px;
-  max-height: 300px;
+  /* box-shadow: 5px 5px 15px black; */
 }
 
-#results {
-  display: flex;
-  padding: 0px;
-  justify-content: space-evenly;
-  max-width: 1000px;
-  max-height:600px;
-  margin: 2px;
+.input-field{
+  margin: 10px;
 }
 
-.flex-container {
-  justify-content: left;
-  display: flex;
-  margin: 5px;
-  flex-wrap: wrap;
+.input-container{
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  background-color: rgb(122, 179, 169);
+  border: 2px solid rgb(74, 72, 72);
+  box-shadow: 3px outset gray;
 }
 
-.soundtrack-text {
+.soundtrack-text{
   margin-left: 50%;
   font-family: 'Alegreya Sans', sans-serif;
   font-size: 20px;
 }
 
-.album {
+.album{
   text-align: left;
   margin: 2%;
   display: block;
@@ -78,12 +86,12 @@ body{
   height:30px;
 }
 
-.cover {
+.cover{
   margin: 2%;
   text-align: left;
 }
 
-.logo {
+.logo{
   width: auto;
   max-height: 200px;
   display: block;
@@ -91,29 +99,14 @@ body{
   margin-right: auto;
 }
 
-.card {
+.card{
   width: 50%;
   float: left;
 }
 
-#list {
-  list-style: none;
-  width: 300px;
-  height: 600px;
-}
-
-#results {
-  display: flex;
-  padding: 0px;
-  justify-content: space-evenly;
-  max-width: 1000px;
-  max-height:600px;
-  margin: 2px;
-}
-
 /* star ratings */
 
-.rating {
+.rating{
   position: relative;
   width: 180px;
   background: transparent;
@@ -127,7 +120,7 @@ body{
   box-shadow: 0 0 2px #b3acac;
 }
 
-.rating__result {
+.rating__result{
   position: absolute;
   top: 0;
   left: 0;
@@ -138,14 +131,77 @@ body{
   pointer-events: none;
 }
 
-.rating__star {
+.rating__star{
   font-size: 1.3em;
   cursor: pointer;
   color: #ffff8d;
   transition: filter linear .3s;
 }
 
-.rating__star:hover {
+.rating__star:hover{
   filter: drop-shadow(1px 1px 4px #ffff00);
 }
 
+/* id */
+#list{
+  list-style: none;
+  width: 300px;
+  height: 600px;
+}
+
+#results{
+  display: flex;
+  padding: 0px;
+  justify-content: space-evenly;
+  max-width: 1000px;
+  max-height:600px;
+  margin: 2px;
+}
+
+#item-input.teal{
+  border: 3px solid rgba(82, 115, 116, 0.736);
+}
+
+/* Style for the error modal */
+#errorModal{
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10%;
+  background-color: rgb(205, 40, 40);
+}
+
+/* Style for the error modal content */
+#errorModal .modal-content{
+  background-color: #fefefe;
+  margin: 15px;
+  padding: 12px;
+  border: 1px solid #888;
+  width: 90%;
+}
+
+/* Style for the close button in the error modal */
+#errorModal .close{
+  color: #aaa;
+  margin: 1px;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#errorModal .close:hover,
+#errorModal .close:focus{
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#errorMessage{
+  text-align: center;
+  margin: 0px;
+  font-size: 20px;
+}
+
+/* media queries */
