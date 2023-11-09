@@ -24,6 +24,14 @@ function omdbApi() {
       return response.json();
     })
     .then(function (data) {
+      if (data.Response === "False") {
+        // Handle the case where the movie data is not available
+        console.log('Error: Movie data not available');
+        errorModal.style.display = 'block';
+        searchButton.style.display = 'none';
+      } else {
+        // Movie data is available, proceed with displaying information
+      }
       console.log(data);
       var title = data.Title;
       var poster = data.Poster;
@@ -61,13 +69,20 @@ function omdbApi() {
       movieInfo.appendChild(writerLi);
       movieInfo.appendChild(awardsLi);
     })
-    var error = !requestURL;
-    // .catch(error){
-    //   // Display error message in the error modal
-    //   errorModal.style.display = 'block'}
-    //   else{
-    //   searchButton.style.display = 'none';}
 
+    .catch(function (error) {
+      // Display error message in the error modal
+      console.error('Error in fetch:', error);
+      errorModal.style.display = 'block';
+      searchButton.style.display = 'none';
+    });
+
+  const closeButton = document.querySelector('.close');
+
+  closeButton.addEventListener('click', function () {
+    errorModal.style.display = 'none';
+    searchButton.style.display = 'block';
+  });
 };
 
 
@@ -183,36 +198,3 @@ document.addEventListener("DOMContentLoaded", function () {
   // Add event listeners
   addItemButton.addEventListener("click", addWatchlistItem);
 });
-
-// add star ratings
-
-const ratingStars = [...document.getElementsByClassName("rating__star")];
-const ratingResult = document.querySelector(".rating__result");
-
-printRatingResult(ratingResult);
-
-function executeRating(stars, result) {
-  const starClassActive = "rating__star fas fa-star";
-  const starClassUnactive = "rating__star far fa-star";
-  const starsLength = stars.length;
-  let i;
-  stars.map((star) => {
-    star.onclick = () => {
-      i = stars.indexOf(star);
-
-      if (star.className.indexOf(starClassUnactive) !== -1) {
-        printRatingResult(result, i + 1);
-        for (i; i >= 0; --i) stars[i].className = starClassActive;
-      } else {
-        printRatingResult(result, i);
-        for (i; i < starsLength; ++i) stars[i].className = starClassUnactive;
-      }
-    };
-  });
-}
-
-function printRatingResult(result, num = 0) {
-  result.textContent = `${num}/5`;
-}
-
-executeRating(ratingStars, ratingResult);
