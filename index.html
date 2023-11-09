@@ -18,7 +18,7 @@
     <nav class="teal accent-4">
         <div class="nav-wrapper">
             </a>
-            <ul class="left hide-on-med-and-down">
+            <ul>
                 <form>
                     <li><a>
                             <input tyle="text" placeholder="Enter Movie Title" id="input">
@@ -47,7 +47,7 @@
                 them to your watchlist, and save your reviews and comments after watching.</h5>
         </div>
         <br>
-        <p class="soundtrack-text"></p>
+        
         <section class="parent-container">
 
             <ul class="movieInfo flex-container" id="list">
@@ -55,9 +55,10 @@
 
             <section class="flex-container2">
                 <div class="album"></div>
-                <div id="results"></div>
                 <img class="cover">
-
+                <div id="results"></div>
+                <div class="soundtrack-text"></div>
+                <!-- <p ></p> -->
             </section>
           <br>  
         </section>
@@ -68,20 +69,10 @@
         <div class="input-field">
             <input class="teal" type="text" id="item-input" placeholder="Add a title to your watchlist.">
             
-            <button id="add-item" class="btn">Add</button>
-        <div class="collection-item">
-
-            <div class="rating" id="rating">
-            <span class="rating__result"></span> 
-            <i class="rating__star far fa-star"></i>
-            <i class="rating__star far fa-star"></i>
-            <i class="rating__star far fa-star"></i>
-            <i class="rating__star far fa-star"></i>
-            <i class="rating__star far fa-star"></i>
-            </div>
-        </div>
-            
-        </div>
+        <button id="add-item" class="btn">Add</button></div>
+        <div class="collection-item"></div>
+        
+        
         
         <ul id="watchlist" class="collection"></ul>
     </div>
