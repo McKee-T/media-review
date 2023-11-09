@@ -65,7 +65,7 @@ async function getMusic(soundtrack) {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': 'f3fb0440b4msh682c2c923345172p1a9677jsn0e62cb010957',
+      'X-RapidAPI-Key': '6920887d7emsh163d61eee2f9fbfp151c57jsn46fa25cd4f30',
       'X-RapidAPI-Host': 'spotify23.p.rapidapi.com'
     }
   };
