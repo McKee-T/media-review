@@ -51,6 +51,9 @@ function omdbApi() {
   movieInfo.appendChild(writerLi);
   movieInfo.appendChild(awardsLi);
 })
+if(response !==200){
+  movieInfo.innerHTML = "Make sure movie title is grammatically correct!"
+}
 };
 
 searchButton.addEventListener("click", omdbApi);
