@@ -85,6 +85,7 @@ function omdbApi() {
   });
 };
 
+
 searchButton.addEventListener("click", omdbApi);
 clickMessage.innerHTML = "";
 
@@ -114,11 +115,16 @@ async function getMusic(soundtrack) {
       var imageTag = document.createElement("img");
       var image = albumItems[i].data.coverArt.sources[0].url;
       var albumUri = albumItems[i].data.uri;
+      var textLi = document.createElement("li");
       anchorTag.setAttribute("href", albumUri);
       anchorTag.setAttribute("title", "album link");
       imageTag.setAttribute("src", image);
-      resultsList.appendChild(anchorTag);
+      textLi.textContent = "Click the soundtrack to listen on Spotify!";
+      textLi.setAttribute("class","soundTrack-text");
       anchorTag.appendChild(imageTag);
+      resultsList.appendChild(anchorTag);
+      flex-container2.appendChild(textLi);
+      
     }
     console.log(album.textContext);
     console.log(cover.src);
