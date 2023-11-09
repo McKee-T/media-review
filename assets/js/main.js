@@ -62,11 +62,11 @@ function omdbApi() {
       movieInfo.appendChild(awardsLi);
     })
     var error = !requestURL;
-    .catch(error){
-      // Display error message in the error modal
-      errorModal.style.display = 'block'}
-      else{
-      searchButton.style.display = 'none';}
+    // .catch(error){
+    //   // Display error message in the error modal
+    //   errorModal.style.display = 'block'}
+    //   else{
+    //   searchButton.style.display = 'none';}
 
 };
 
@@ -106,8 +106,8 @@ async function getMusic(soundtrack) {
       imageTag.setAttribute("src", image);
       textLi.textContent = "Click the soundtrack to listen on Spotify!";
       textLi.setAttribute("class","soundTrack-text");
-      resultsList.appendChild(anchorTag);
       anchorTag.appendChild(imageTag);
+      resultsList.appendChild(anchorTag);
       flex-container2.appendChild(textLi);
       
     }

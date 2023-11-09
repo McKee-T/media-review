@@ -181,7 +181,7 @@ body{
   margin: 15px;
   padding: 12px;
   border: 1px solid #888;
-  width: 90%;
+  width: 90%; 
 }
 
 /* Style for the close button in the error modal */
@@ -207,3 +207,71 @@ body{
 }
 
 /* media queries */
+@media screen and (max-width:1339px) {
+  /* nav{
+    text-align: center;
+    margin: 0px;
+    max-width: 100%;
+  } */
+  /* main{
+    justify-content: center;
+  } */
+  .parent-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+ 
+  }
+  .flex-container{
+    margin:0px;
+    /* margin-right: 70px; */
+    margin-right: 25%;
+    margin-left: 25%;
+    flex-wrap: wrap;
+    /* box-shadow: 5px 5px 20px black; */
+  }
+  .flex-container2{
+    display: flex;
+    flex-direction: column; /*HP changed to column for text to be beneath soundtrack image*/
+    justify-content: center;
+    align-items: center;
+    /* max-width: 1500px; */
+    max-height: 600px;
+    padding: 0px;
+    /* box-shadow: 5px 5px 15px black; */
+  }
+  .cover{
+    margin-top: 10px;  /*HP added this so the image would align with movie poster*/
+    /* margin: 2%; */
+    text-align: center;
+    justify-content: center;
+    margin-left: 5px;
+  }
+  .journal-text{
+    text-align: center;
+    font-family:'Alegreya Sans', sans-serif;
+    font-size: 15px;
+    border: 2px solid gray;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 0px;
+    background-color: rgb(221, 244, 50);
+  }
+ 
+};
+@media screen and (max-width:500px){
+  .input-container{
+    /* margin-left: 5px;
+    margin-right: 5px; */
+    margin-top: 0px;
+    margin-bottom: 5px;
+    background-color: rgb(122, 179, 169);
+    border: 2px solid rgb(74, 72, 72);
+    box-shadow: 3px outset gray;
+    max-width: 90%;
+  }
+  .center-align{
+    /* max-width: 100%; */
+  }
+}
