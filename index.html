@@ -34,7 +34,14 @@
     <img class="logo" src="./assets/IMG_0207.PNG">
 
     <main>
-
+        <!-- Error Modal -->
+        <div id="errorModal" class="modal">
+            <div class="modal-content">
+            <span class="close" id="closeErrorModal">&times;</span>
+            <p id="errorMessage">Error: Please search for a valid movie!</p>
+            </div>
+        </div>
+  
         <div>
             <h5 class="center-align">A website where you can search for movies and their soundtracks, add
                 them to your watchlist, and save your reviews and comments after watching.</h5>
@@ -52,27 +59,33 @@
                 <img class="cover">
 
             </section>
-
+          <br>  
         </section>
-
-
+         <p class="journal-text">Keep a Journal of Your Films Below!</p>
+        <div class="input-container">
+        <br>
+        
         <div class="input-field">
             <input class="teal" type="text" id="item-input" placeholder="Add a title to your watchlist.">
+            
             <button id="add-item" class="btn">Add</button>
+        <div class="collection-item">
 
+            <div class="rating" id="rating">
+            <span class="rating__result"></span> 
+            <i class="rating__star far fa-star"></i>
+            <i class="rating__star far fa-star"></i>
+            <i class="rating__star far fa-star"></i>
+            <i class="rating__star far fa-star"></i>
+            <i class="rating__star far fa-star"></i>
+            </div>
         </div>
-
-<!-- star rating (savannah) -->
-<div class="rating" id="rating">
-    <span class="rating__result"></span> 
-   <i class="rating__star far fa-star"></i>
-   <i class="rating__star far fa-star"></i>
-   <i class="rating__star far fa-star"></i>
-   <i class="rating__star far fa-star"></i>
-   <i class="rating__star far fa-star"></i>
-</div>
-
+            
+        </div>
+        
         <ul id="watchlist" class="collection"></ul>
+    </div>
+        
 
     </main>
 
