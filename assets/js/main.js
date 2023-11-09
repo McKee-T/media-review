@@ -20,8 +20,9 @@ function omdbApi() {
       if (!response.ok) {
         // Display error in the modal
         errorModal.style.display = 'block';
+      } else {
+        return response.json();
       }
-      return response.json();
     })
     .then(function (data) {
       console.log(data);
@@ -62,10 +63,10 @@ function omdbApi() {
       movieInfo.appendChild(awardsLi);
     })
 
-    .catch(
+    // .catch(
       // Display error message in the error modal
-      errorModal.style.display = 'block',
-      searchButton.style.display = 'none');
+      // errorModal.style.display = 'block',
+      // searchButton.style.display = 'none');
 
 };
 
