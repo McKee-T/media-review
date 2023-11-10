@@ -20,8 +20,9 @@ function omdbApi() {
       if (!response.ok) {
         // Display error in the modal
         errorModal.style.display = 'block';
+      } else {
+        return response.json();
       }
-      return response.json();
     })
     .then(function (data) {
       if (data.Response === "False") {
